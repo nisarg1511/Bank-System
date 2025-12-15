@@ -7,7 +7,7 @@ const { auth } = require("../middleware/auth");
 const router = express.Router();
 
 const generateToken = (userId) => {
-  return jwt.sign({ id: userId },"qP9Lx7mE2NfA8wKJcVZB0RrU5H4sYtD1oW6QeIhM+uGk=", { expiresIn: "24h" });
+  return jwt.sign({ id: userId },process.env.JWT_SECRET, { expiresIn: "24h" });
 };
 
 router.post(

@@ -24,7 +24,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose.connect(
-  "mongodb+srv://nisargjoshi121:JTJ3tfx8stvyL080@hh-main-cluster.3fhsi.mongodb.net/",
+  process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
